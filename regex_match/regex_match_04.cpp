@@ -11,9 +11,9 @@ int main()
 
 	cout << "number of capture groups: " << rgx.mark_count() << "\n";
 
-	std::ifstream ifs{ "floats.txt" };
+	ifstream ifs{ "floats.txt" };
 	if (!ifs) {
-		std::cerr << "floats.txt dosyasi acilamadi\n";
+		std::cerr << "cannot open file: float.txt!\n";
 		exit(EXIT_FAILURE);
 	}
 
@@ -21,10 +21,10 @@ int main()
 
 	while (ifs >> entry) {
 		if (regex_match(entry, rgx)) {
-			cout << entry << " gecerli bir gercek sayi\n";
+			cout << entry << " is a valid floating point number\n";
 		}
 		else {
-			cout << entry << " gecerli bir gercek sayi degil\n";
+			cout << entry << " is not a valid floating point number\n";
 		}
 	}
 }
