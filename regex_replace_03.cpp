@@ -4,11 +4,11 @@
 
 int main()
 {
-	std::string str = "corona virus yayiliyor,\n"
-		"olu sayisinin artmasindan\r\n"
-		"endise ediliyor.\n"
-		"Allah ulkemizi korusun\r\n"
-		"Amin!";
+	std::string str = "Ahmet Ersoy,\n"
+		"Mustafa Kaya,\r\n"
+		"Niyazi Eruslu.\n"
+		"Tayfun Cihater,\r\n"
+		"Nurullah Gezgin!";
 	std::regex rgx{ "\\r?\\n" };
 
 	auto line = regex_replace(str, rgx, " ");
