@@ -1,6 +1,5 @@
 // greedy or lazy
 
-#include <vector>
 #include <string>
 #include <regex>
 #include <iostream>
