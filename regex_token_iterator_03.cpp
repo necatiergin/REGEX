@@ -1,7 +1,6 @@
 #include <iostream>
 #include <regex>
 #include <string>
-#include <vector>
 
 // Split function using regex_token_iterator
 std::vector<std::string> split(const std::string& input, const std::string& delim_pattern)
