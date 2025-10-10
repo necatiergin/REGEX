@@ -6,16 +6,14 @@
 
 int main()
 {
-    using namespace std;
+    std::string str;
+    std::cout << "bir yazi girin: ";
+    std::getline(std::cin, str);
+    std::regex rgx("\\b[a-z]+(han|nur|can)\\b"); // whitespace
 
-    string str;
-    cout << "bir yazi girin: ";
-    getline(cin, str);
-    std::regex rgx("\\b[a-z]+(han|nur)\\b"); // whitespace
-
-    std::for_each(std::sregex_iterator(str.begin(), str.end(), rgx), std::sregex_iterator{}, 
+    std::for_each(std::sregex_iterator(str.begin(), str.end(), rgx), std::sregex_iterator{},
         [](const auto& sm) {
-            cout << sm.str() << "\n";
+            std::cout << sm.str() << " " << sm.str(1) << '\n';
         }
     );
 }
