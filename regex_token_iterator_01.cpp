@@ -11,25 +11,25 @@ int main()
 
 	iterator rend;
 
-	std::cout << "uyanlarin tamami\n";
+	std::cout << "all matches:\n";
 	for (iterator iter(str.begin(), str.end(), rgx, 0); iter != rend; ++iter)
 		std::cout << " [" << *iter << "]";
 
 	std::cout << "\n\n";
 
-	std::cout << "2. submatch'ler:";
+	std::cout << "second submatches:";
 	for (iterator iter(str.begin(), str.end(), rgx, 2); iter != rend; ++iter)
 		std::cout << " [" << *iter << "]";
 
 	std::cout << "\n\n";
 
-	std::cout << "1. ve 2. submatch'ler:";
+	std::cout << "first and second submatches:";
 	for (iterator iter(str.begin(), str.end(), rgx, { 1, 2 }); iter != rend; ++iter)
 		std::cout << " [" << *iter << "]";
 
 	std::cout << "\n\n";
 
-	std::cout << "ayiraclar :";
+	std::cout << "separators:";
 
 	for (iterator iter(str.begin(), str.end(), rgx, -1); iter != rend; ++iter)
 		std::cout << " [" << *iter << "]";
